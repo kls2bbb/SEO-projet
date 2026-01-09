@@ -11,15 +11,17 @@
 <body>
 <header>
     <div class='container nav'>
-    <a class='logo' href='#'>KDF</a>
+    <a class='logo' href='/'>KDF</a>
     <strong>Klewis — Développeur Freelance WordPress à Paris</strong>
-    </a>
+    <button class='hamburger' aria-label='Menu' onclick='toggleMenu()'>
+      <span></span><span></span><span></span>
+    </button>
     <nav aria-label='Navigation principale'>
       <ul>
-        <li><a href='/#services'>Services</a></li>
-        <li><a href='/blog.html'>Blog</a></li>
-        <li><a href='/a-propos.html'>À propos</a></li>
-        <li><a href='/contact.html'>Contact</a></li>
+        <li><a href='/#services' onclick='closeMenu()'>Services</a></li>
+        <li><a href='/blog.html' onclick='closeMenu()'>Blog</a></li>
+        <li><a href='/a-propos.html' onclick='closeMenu()'>À propos</a></li>
+        <li><a href='/contact.html' onclick='closeMenu()'>Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -62,5 +64,10 @@
   <p><a class="btn primary" href="/contact.html">Me décrire votre projet</a></p>
 </main>
 <footer><div class="container"><hr><small>© KDF — Développeur Freelance WordPress à Paris — Tous droits réservés.</small></div></footer>
+<script>
+function toggleMenu(){const nav=document.querySelector('nav');const btn=document.querySelector('.hamburger');nav.classList.toggle('active');btn.classList.toggle('active')}
+function closeMenu(){const nav=document.querySelector('nav');nav.classList.remove('active');document.querySelector('.hamburger').classList.remove('active')}
+document.addEventListener('click',e=>{if(!e.target.closest('header'))closeMenu()})
+</script>
 </body>
 </html>
