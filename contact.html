@@ -1,57 +1,51 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact | Développeur freelance Paris</title>
-    <meta name="description" content="Contactez un développeur freelance à Paris pour vos projets web.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact | KDF</title>
+  <meta name="description" content="Demandez un devis rapide">
+  <link rel="canonical" href="https://freelance-developpeur-paris.com/contact.html">
+  <link rel="stylesheet" href="/styles.css">
 </head>
-
 <body>
 <header>
-    <h1>Contact – Développeur freelance Paris</h1>
-    <nav>
-        <a href="index.html">Accueil</a> |
-        <a href="services.html">Services</a> |
-        <a href="a-propos.html">À propos</a> |
-        <a href="blog.html">Blog</a>
+    <div class='container nav'>
+    <a class='logo' href='/kdf.html'>KDF</a>
+    <strong>Klewis — Développeur Freelance WordPress à Paris</strong>
+    </a>
+    <nav aria-label='Navigation principale'>
+      <ul>
+        <li><a href='/#services'>Services</a></li>
+        <li><a href='/blog.html'>Blog</a></li>
+        <li><a href='/a-propos.html'>À propos</a></li>
+        <li><a href='#'>Contact</a></li>
+      </ul>
     </nav>
+  </div>
 </header>
 
-<main>
-    <section>
-        <h2>Me contacter</h2>
-        <p>
-            Vous pouvez me contacter pour toute demande concernant un projet web,
-            une création de site internet ou une optimisation SEO.
-        </p>
-    </section>
+<main class="container prose">
+  <h1>Contactez-moi</h1>
+  <p>Vous avez un projet WordPress ? Décrivez-le en quelques mots et je vous réponds rapidement.</p>
 
-    <section>
-        <h2>Informations de contact</h2>
-        <p><strong>Localisation :</strong> Paris, France</p>
-        <p><strong>Email :</strong> contact@freelance-developpeur-paris.com</p>
-    </section>
+  <div class="card2" style="max-width:500px;margin:auto;">
+    <form method="post" action="mailto:kls.dev-freelance@gmail.com" enctype="text/plain">
+      <label>Nom<br><input name="nom" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border)"></label><br><br>
+      <label>Email<br><input name="email" type="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border)"></label><br><br>
+      <label>Message<br><textarea name="message" rows="5" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border)"></textarea></label><br><br>
+      <button class="btn primary" type="submit">Envoyer</button>
+    </form>
+  </div>
 
-    <section>
-        <h2>Formulaire de contact</h2>
-        <form>
-            <label>Nom :</label><br>
-            <input type="text" name="nom"><br><br>
-
-            <label>Email :</label><br>
-            <input type="email" name="email"><br><br>
-
-            <label>Message :</label><br>
-            <textarea name="message" rows="5"></textarea><br><br>
-
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
+  <h2>Mes coordonnées</h2>
+  <p>Email : <a href="mailto:kdf.dev-freelance@gmail.com">kdf.dev-freelance@gmail.com</a><br>
+     Téléphone : <a href="tel:+33602786105">06 02 78 61 05</a></p>
 </main>
 
 <footer>
-    <p>© 2026 – Développeur freelance Paris</p>
+  <div class="container"><hr><small>© KDF — Développeur Freelance WordPress à Paris — Tous droits réservés.</small></div>
 </footer>
 </body>
 </html>

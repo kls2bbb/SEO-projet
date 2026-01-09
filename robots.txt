@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.freelance-developpeur-paris.com/sitemap.xml
+``
