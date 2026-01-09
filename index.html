@@ -42,12 +42,15 @@
     <div class='container nav'>
     <a class='logo' href='/'>KDF</a>
     <strong>Klewis — Développeur Freelance WordPress à Paris</strong>
+    <button class='hamburger' aria-label='Menu' onclick='toggleMenu()'>
+      <span></span><span></span><span></span>
+    </button>
     <nav aria-label='Navigation principale'>
       <ul>
-        <li><a href='/#services'>Services</a></li>
-        <li><a href='/blog.html'>Blog</a></li>
-        <li><a href='/a-propos.html'>À propos</a></li>
-        <li><a href='/contact.html'>Contact</a></li>
+        <li><a href='/#services' onclick='closeMenu()'>Services</a></li>
+        <li><a href='/blog.html' onclick='closeMenu()'>Blog</a></li>
+        <li><a href='/a-propos.html' onclick='closeMenu()'>À propos</a></li>
+        <li><a href='/contact.html' onclick='closeMenu()'>Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -84,22 +87,32 @@
   <div class="card-grid">
     <div class="card">
       <h3>Site vitrine</h3>
-      <p>Un site simple pour présenter votre activité.</p>
-      <p><strong>Tarif :</strong> 500 € – 1 200 €</p>
+      <p>Un site simple pour présenter votre activité et attirer vos premiers clients en ligne.</p>
+      <p><strong>Tarif :</strong> 500 € – 1 200 €</p>
     </div>
     <div class="card">
       <h3>Boutique en ligne</h3>
-      <p>Une boutique WordPress pour vendre vos produits.</p>
-      <p><strong>Tarif :</strong> 1 000 € – 2 500 €</p>
+      <p>Une boutique WordPress avec WooCommerce pour vendre vos produits directement en ligne.</p>
+      <p><strong>Tarif :</strong> 1 000 € – 2 500 €</p>
     </div>
     <div class="card">
       <h3>Refonte & SEO</h3>
-      <p>Améliorer un site existant pour le rendre plus rapide et visible.</p>
+      <p>Améliorer un site existant : performance, rapidité, visibilité Google et expérience utilisateur.</p>
       <p><strong>Tarif :</strong> 600 € – 1 500 €</p>
     </div>
   </div>
 </section>
 
+<section class="section prose">
+  <h2>Pourquoi choisir un développeur freelance à Paris ?</h2>
+  <p>Créer un site WordPress avec un développeur freelance, c'est obtenir :</p>
+  <ul>
+    <li><strong>Un site adapté à votre besoin :</strong> pas de solution clé en main inutile</li>
+    <li><strong>Un tarif maîtrisé :</strong> pas de frais cachés ni d'engagement long terme</li>
+    <li><strong>Un accompagnement personnalisé :</strong> vous comprenez votre site et pouvez l'administrer seul</li>
+    <li><strong>Une performance garantie :</strong> sites rapides et bien visibles sur Google</li>
+  </ul>
+</section>
 
     </section>
   </main>
@@ -107,8 +120,8 @@
 
 <footer>
   <div class="container">
-    <h3>KDF — Développeur WordPress freelance à Paris</h3>
-    <p>Je crée des sites WordPress rapides et bien référencés : vitrine, boutique en ligne, optimisation SEO.</p>
+    <h2>Contactez-moi pour votre projet WordPress</h2>
+    <p>Je crée des sites WordPress rapides et bien référencés à Paris : vitrine, boutique en ligne, optimisation SEO.</p>
     <p><strong>Contact :</strong><br>
       <a href="mailto:kdf.dev-freelance@gmail.com">kdf.dev-freelance@gmail.com</a><br>
       <a href="tel:0602786105">06 02 78 61 05</a>
@@ -118,8 +131,11 @@
    <small>© KDF — Développeur Freelance WordPress à Paris — Tous droits réservés.</small>
   </div>
 </footer>
-``
 
-
+<script>
+function toggleMenu(){const nav=document.querySelector('nav');const btn=document.querySelector('.hamburger');nav.classList.toggle('active');btn.classList.toggle('active')}
+function closeMenu(){const nav=document.querySelector('nav');nav.classList.remove('active');document.querySelector('.hamburger').classList.remove('active')}
+document.addEventListener('click',e=>{if(!e.target.closest('header'))closeMenu()})
+</script>
 </body>
 </html>
