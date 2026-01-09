@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.freelance-developpeur-paris.com/sitemap.xml
+Sitemap: https://freelance-developpeur-paris.com/sitemap.xml
 
